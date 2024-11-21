@@ -1,0 +1,13 @@
+allure-pytest==2.9.45
+Appium-Python-Client==2.0.0
+Faker==9.6.0
+jsonpath==0.82
+loguru==0.5.3
+openpyxl==3.0.9
+PyMySQL==1.0.2
+pytest==6.2.5
+pytest-parallel==0.1.1
+pytest-rerunfailures==10.2
+PyYAML==5.3.1
+requests==2.26.0
+selenium==4.0.0

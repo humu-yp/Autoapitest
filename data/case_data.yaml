@@ -1,0 +1,116 @@
+#发送验证码
+send_code:
+  - title: '验证账号为空发送验证码失败'
+    account:
+      method: 'post'
+      url: 'login/send_code'
+      data:
+        uname: ''
+    expected:
+      $..status: -2
+      $..data:
+
+  - title: '验证账号格式错误发送验证码失败'
+    account:
+      method: 'post'
+      url: 'login/send_code'
+      data:
+        uname: 'error'
+    expected:
+      $..status: -2
+      $..data:
+
+  - title: '验证正确账号发送验证码成功'
+    account:
+      method: 'post'
+      url: 'login/send_code'
+      data:
+        uname: '16666666666'
+    expected:
+      $..status: 1
+      $.msg: "手机验证码请求成功"
+
+  - title: '验证55秒内重复发送验证码失败'
+    account:
+      method: 'post'
+      url: 'login/send_code'
+      data:
+        uname: '16666666666'
+    expected:
+      $..status: -1
+      $.data.msg: "55秒内只能发送一次"
+
+#登录
+login:
+  - title: '账号为空登录失败'
+    account:
+      method: 'post'
+      url: 'login/index'
+      data:
+        uname:
+        code: '15935745'
+    extract:
+    expected:
+      $..status: -2
+      $..msg: '亲，用户信息输入错误哦'
+
+  - title: '密码为空登录失败'
+    account:
+      method: 'post'
+      url: 'login/index'
+      data:
+        uname: 'right#cai'
+        code:
+    extract:
+    expected:
+      $..status: -2
+      $..msg: '亲，验证码错误,请重试哦'
+
+  - title: '正确账号错误密码登录失败'
+    account:
+      method: 'post'
+      url: 'login/index'
+      data:
+        uname: 'right#cai'
+        code: '15935745'
+    extract:
+    expected:
+      $..status: -2
+      $..msg: '亲，验证码错误,请重试哦'
+
+  - title: '错误账号正确密码登录失败'
+    account:
+      method: 'post'
+      url: 'login/index'
+      data:
+        uname: 'right#ca'
+        code: '159357456'
+    extract:
+    expected:
+      $..status: -2
+      $..data:
+
+  - title: '正确账号密码登录成功'
+    account:
+      method: 'post'
+      url: 'login/index'
+      data:
+        uname: 'right#cai'
+        code: '159357456'
+    extract:
+    expected:
+      $..status: 1
+      $..msg: '登录成功'
+
+  - title: '正确账号验证码登录成功'
+    account:
+      method: 'post'
+      url: 'login/index'
+      data:
+        uname: '16666666666'
+        code: '666666'
+    extract:
+      token: '$..token'
+    expected:
+      $..status: 1
+      $..msg: '登录成功'

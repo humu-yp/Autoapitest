@@ -1,0 +1,106 @@
+2024-02-22 09:08:51.188 | INFO     | common.wraaper:inner:25 - 请求接口：login/send_code
+2024-02-22 09:08:51.188 | INFO     | common.wraaper:inner:26 - 请求方式：post
+2024-02-22 09:08:51.188 | INFO     | common.wraaper:inner:27 - 请求参数：{'uname': ''}
+2024-02-22 09:08:51.309 | INFO     | common.wraaper:inner:30 - 响应body：
+{'status': -2, 'msg': '用户账号 必须填写. ', 'data': None}
+2024-02-22 09:08:51.309 | INFO     | common.wraaper:inner:31 - 响应status：200
+2024-02-22 09:08:51.309 | INFO     | common.wraaper:inner:47 - jsonpath表达式：['$..status', '$..data']
+2024-02-22 09:08:51.309 | IFO     | common.wraaper:inner:48 - 预期结果: [-2, None]
+2024-02-22 09:08:51.309 | INFO     | common.wraaper:inner:49 - 实际结果: [-2, None]
+2024-02-22 09:08:51.309 | INFO     | common.wraaper:inner:52 - 断言结果: 成功
+2024-02-22 09:08:51.311 | INFO     | common.wraaper:inner:25 - 请求接口：login/send_code
+2024-02-22 09:08:51.312 | INFO     | common.wraaper:inner:26 - 请求方式：post
+2024-02-22 09:08:51.312 | INFO     | common.wraaper:inner:27 - 请求参数：{'uname': 'error'}
+2024-02-22 09:08:51.348 | INFO     | common.wraaper:inner:30 - 响应body：
+{'status': -2, 'msg': '哎呀，error 信息不存在哦', 'data': None}
+2024-02-22 09:08:51.348 | INFO     | common.wraaper:inner:31 - 响应status：200
+2024-02-22 09:08:51.349 | INFO     | common.wraaper:inner:47 - jsonpath表达式：['$..status', '$..data']
+2024-02-22 09:08:51.349 | INFO     | common.wraaper:inner:48 - 预期结果: [-2, None]
+2024-02-22 09:08:51.349 | INFO     | common.wraaper:inner:49 - 实际结果: [-2, None]
+2024-02-22 09:08:51.349 | INFO     | common.wraaper:inner:52 - 断言结果: 成功
+2024-02-22 09:08:51.350 | INFO     | common.wraaper:inner:25 - 请求接口：login/send_code
+2024-02-22 09:08:51.350 | INFO     | common.wraaper:inner:26 - 请求方式：post
+2024-02-22 09:08:51.350 | INFO     | common.wraaper:inner:27 - 请求参数：{'uname': '16666666666'}
+2024-02-22 09:08:51.423 | INFO     | common.wraaper:inner:30 - 响应body：
+{'status': 1, 'msg': '手机验证码请求成功', 'data': {'msg': '短信流程完成', 'phone': '16666666666', 'code': 0}}
+2024-02-22 09:08:51.424 | INFO     | common.wraaper:inner:31 - 响应status：200
+2024-02-22 09:08:51.424 | INFO     | common.wraaper:inner:47 - jsonpath表达式：['$..status', '$.msg']
+2024-02-22 09:08:51.424 | INFO     | common.wraaper:inner:48 - 预期结果: [1, '手机验证码请求成功']
+2024-02-22 09:08:51.424 | INFO     | common.wraaper:inner:49 - 实际结果: [1, '手机验证码请求成功']
+2024-02-22 09:08:51.424 | INFO     | common.wraaper:inner:52 - 断言结果: 成功
+2024-02-22 09:08:51.425 | INFO     | common.wraaper:inner:25 - 请求接口：login/send_code
+2024-02-22 09:08:51.425 | INFO     | common.wraaper:inner:26 - 请求方式：post
+2024-02-22 09:08:51.425 | INFO     | common.wraaper:inner:27 - 请求参数：{'uname': '16666666666'}
+2024-02-22 09:08:51.495 | INFO     | common.wraaper:inner:30 - 响应body：
+{'status': -1, 'msg': '手机验证码请求失败', 'data': {'msg': '55秒内只能发送一次', 'phone': '16666666666', 'code': 1}}
+2024-02-22 09:08:51.496 | INFO     | common.wraaper:inner:31 - 响应status：200
+2024-02-22 09:08:51.496 | INFO     | common.wraaper:inner:47 - jsonpath表达式：['$..status', '$.data.msg']
+2024-02-22 09:08:51.497 | INFO     | common.wraaper:inner:48 - 预期结果: [-1, '55秒内只能发送一次']
+2024-02-22 09:08:51.497 | INFO     | common.wraaper:inner:49 - 实际结果: [-1, '55秒内只能发送一次']
+2024-02-22 09:08:51.498 | INFO     | common.wraaper:inner:52 - 断言结果: 成功
+2024-02-22 09:08:51.501 | INFO     | common.wraaper:inner:25 - 请求接口：login/index
+2024-02-22 09:08:51.501 | INFO     | common.wraaper:inner:26 - 请求方式：post
+2024-02-22 09:08:51.501 | INFO     | common.wraaper:inner:27 - 请求参数：{'uname': None, 'code': '15935745'}
+2024-02-22 09:08:51.528 | INFO     | common.wraaper:inner:30 - 响应body：
+{'status': -2, 'msg': '亲，用户信息输入错误哦', 'data': None}
+2024-02-22 09:08:51.529 | INFO     | common.wraaper:inner:31 - 响应status：200
+2024-02-22 09:08:51.529 | INFO     | common.utils:extract:70 - 提取表达式为空！
+2024-02-22 09:08:51.529 | INFO     | common.wraaper:inner:47 - jsonpath表达式：['$..status', '$..msg']
+2024-02-22 09:08:51.529 | INFO     | common.wraaper:inner:48 - 预期结果: [-2, '亲，用户信息输入错误哦']
+2024-02-22 09:08:51.529 | INFO     | common.wraaper:inner:49 - 实际结果: [-2, '亲，用户信息输入错误哦']
+2024-02-22 09:08:51.529 | INFO     | common.wraaper:inner:52 - 断言结果: 成功
+2024-02-22 09:08:51.530 | INFO     | common.wraaper:inner:25 - 请求接口：login/index
+2024-02-22 09:08:51.530 | INFO     | common.wraaper:inner:26 - 请求方式：post
+2024-02-22 09:08:51.530 | INFO     | common.wraaper:inner:27 - 请求参数：{'uname': 'right#cai', 'code': None}
+2024-02-22 09:08:51.566 | INFO     | common.wraaper:inner:30 - 响应body：
+{'status': -2, 'msg': '亲，验证码错误,请重试哦', 'data': None}
+2024-02-22 09:08:51.566 | INFO     | common.wraaper:inner:31 - 响应status：200
+2024-02-22 09:08:51.566 | INFO     | common.utils:extract:70 - 提取表达式为空！
+2024-02-22 09:08:51.566 | INFO     | common.wraaper:inner:47 - jsonpath表达式：['$..status', '$..msg']
+2024-02-22 09:08:51.566 | INFO     | common.wraaper:inner:48 - 预期结果: [-2, '亲，验证码错误,请重试哦']
+2024-02-22 09:08:51.566 | INFO     | common.wraaper:inner:49 - 实际结果: [-2, '亲，验证码错误,请重试哦']
+2024-02-22 09:08:51.567 | INFO     | common.wraaper:inner:52 - 断言结果: 成功
+2024-02-22 09:08:51.568 | INFO     | common.wraaper:inner:25 - 请求接口：login/index
+2024-02-22 09:08:51.568 | INFO     | common.wraaper:inner:26 - 请求方式：post
+2024-02-22 09:08:51.568 | INFO     | common.wraaper:inner:27 - 请求参数：{'uname': 'right#cai', 'code': '15935745'}
+2024-02-22 09:08:51.606 | INFO     | common.wraaper:inner:30 - 响应body：
+{'status': -2, 'msg': '亲，验证码错误,请重试哦', 'data': None}
+2024-02-22 09:08:51.607 | INFO     | common.wraaper:inner:31 - 响应status：200
+2024-02-22 09:08:51.607 | INFO     | common.utils:extract:70 - 提取表达式为空！
+2024-02-22 09:08:51.607 | INFO     | common.wraaper:inner:47 - jsonpath表达式：['$..status', '$..msg']
+2024-02-22 09:08:51.607 | INFO     | common.wraaper:inner:48 - 预期结果: [-2, '亲，验证码错误,请重试哦']
+2024-02-22 09:08:51.607 | INFO     | common.wraaper:inner:49 - 实际结果: [-2, '亲，验证码错误,请重试哦']
+2024-02-22 09:08:51.607 | INFO     | common.wraaper:inner:52 - 断言结果: 成功
+2024-02-22 09:08:51.608 | INFO     | common.wraaper:inner:25 - 请求接口：login/index
+2024-02-22 09:08:51.608 | INFO     | common.wraaper:inner:26 - 请求方式：post
+2024-02-22 09:08:51.608 | INFO     | common.wraaper:inner:27 - 请求参数：{'uname': 'right#ca', 'code': '159357456'}
+2024-02-22 09:08:51.643 | INFO     | common.wraaper:inner:30 - 响应body：
+{'status': -2, 'msg': '哎呀，ca 信息不存在哦', 'data': None}
+2024-02-22 09:08:51.643 | INFO     | common.wraaper:inner:31 - 响应status：200
+2024-02-22 09:08:51.643 | INFO     | common.utils:extract:70 - 提取表达式为空！
+2024-02-22 09:08:51.643 | INFO     | common.wraaper:inner:47 - jsonpath表达式：['$..status', '$..data']
+2024-02-22 09:08:51.644 | INFO     | common.wraaper:inner:48 - 预期结果: [-2, None]
+2024-02-22 09:08:51.644 | INFO     | common.wraaper:inner:49 - 实际结果: [-2, None]
+2024-02-22 09:08:51.644 | INFO     | common.wraaper:inner:52 - 断言结果: 成功
+2024-02-22 09:08:51.646 | INFO     | common.wraaper:inner:25 - 请求接口：login/index
+2024-02-22 09:08:51.647 | INFO     | common.wraaper:inner:26 - 请求方式：post
+2024-02-22 09:08:51.647 | INFO     | common.wraaper:inner:27 - 请求参数：{'uname': 'right#cai', 'code': '159357456'}
+2024-02-22 09:08:51.765 | INFO     | common.wraaper:inner:30 - 响应body：
+{'status': 1, 'msg': '登录成功', 'data': {'token': 'g8izmxpjkbval7xextnlfacad4eqqu8zxt0ae8vj5jqxof9pyllgiyxdlidx363mtp3dd476', 'nickname': '菠菜的医助', 'city_ids': '2,126,3587,3588', 'province_ids': '', 'sale_region': '河北省唐山市,北京市北京市,天津市天津市', 'mid': 476, 'phone': '16666666666', 'is_leader': 0, 'team_role': 0}}
+2024-02-22 09:08:51.765 | INFO     | common.wraaper:inner:31 - 响应status：200
+2024-02-22 09:08:51.765 | INFO     | common.utils:extract:70 - 提取表达式为空！
+2024-02-22 09:08:51.765 | INFO     | common.wraaper:inner:47 - jsonpath表达式：['$..status', '$..msg']
+2024-02-22 09:08:51.766 | INFO     | common.wraaper:inner:48 - 预期结果: [1, '登录成功']
+2024-02-22 09:08:51.766 | INFO     | common.wraaper:inner:49 - 实际结果: [1, '登录成功']
+2024-02-22 09:08:51.766 | INFO     | common.wraaper:inner:52 - 断言结果: 成功
+2024-02-22 09:08:51.768 | INFO     | common.wraaper:inner:25 - 请求接口：login/index
+2024-02-22 09:08:51.768 | INFO     | common.wraaper:inner:26 - 请求方式：post
+2024-02-22 09:08:51.769 | INFO     | common.wraaper:inner:27 - 请求参数：{'uname': '16666666666', 'code': '666666'}
+2024-02-22 09:08:51.894 | INFO     | common.wraaper:inner:30 - 响应body：
+{'status': 1, 'msg': '登录成功', 'data': {'token': 'rnahj2nnljqpxelzg3uxw0np3kykdgtsw96k56huiz1zafqtv4tzbm9f1brth2bhtp3dd476', 'nickname': '菠菜的医助', 'city_ids': '2,126,3587,3588', 'province_ids': '', 'sale_region': '河北省唐山市,北京市北京市,天津市天津市', 'mid': 476, 'phone': '16666666666', 'is_leader': 0, 'team_role': 0}}
+2024-02-22 09:08:51.894 | INFO     | common.wraaper:inner:31 - 响应status：200
+2024-02-22 09:08:51.895 | INFO     | common.utils:extract:76 - 提取token成功
+2024-02-22 09:08:51.895 | INFO     | common.wraaper:inner:47 - jsonpath表达式：['$..status', '$..msg']
+2024-02-22 09:08:51.895 | INFO     | common.wraaper:inner:48 - 预期结果: [1, '登录成功']
+2024-02-22 09:08:51.896 | INFO     | common.wraaper:inner:49 - 实际结果: [1, '登录成功']
+2024-02-22 09:08:51.899 | INFO     | common.wraaper:inner:52 - 断言结果: 成功
